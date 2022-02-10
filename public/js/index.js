@@ -3,7 +3,7 @@ $(document).ready(function () {
     const id = $(this).closest('.card').attr("data-book-id");
     console.log('xczx');
     if (id) {
-      fetch(`http://localhost:3000/api/books/${id}`, {
+      fetch(`/api/books/${id}`, {
         method: 'DELETE',
       })
         .then(res => {
@@ -33,7 +33,7 @@ async function setAction(key = 'create') {
         formData.append(data[name].name, data[name].value);
       }
 
-      const response = await fetch('http://localhost:3000/api/books/', {
+      const response = await fetch('/api/books/', {
         method: 'POST',
         body: formData
       });
@@ -49,7 +49,7 @@ async function setAction(key = 'create') {
       return
     }
 
-    const response = await fetch(`http://localhost:3000/api/books${id}`, {
+    const response = await fetch(`/api/books${id}`, {
       method: 'PUT',
       body: formData
     });

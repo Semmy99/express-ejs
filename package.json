@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index",
     "start": "node index.js"
   },
   "author": "",
