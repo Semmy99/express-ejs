@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/create.css">
+  <title>
+    <%= path==='view' ? 'Просмотр книги' : 'Редактирование книги' %>
+  </title>
+</head>
+
+<body>
+  <main class="main-section" onsubmit="return setAction('update')">
+    <nav>
+      <li class="link_nav"><a href="/">Главная</a></li>
+    </nav>
+    <form class="form" id="form">
+      <div class="title">
+        <%= path==='view' ? 'Просмотр книги' : 'Редактирование книги' %>
+      </div>
+      <div class="input-wrapper">
+        <div class="input-container ic1">
+          <input value="<%- book.title %>" id="title" class="input" type="text" placeholder=" " name="title"
+            <%=path==='view' ? 'readonly' : 'required' %> />
+          <div class="cut"></div>
+          <label for="title" class="placeholder">Заголовок</label>
+        </div>
+        <div class="input-container ic2">
+          <input <%=path==='view' ? 'readonly' : 'required' %> value="<%- book.description %>" id="description"
+            class="input" type="text" placeholder=" " name="description" />
+            <div class="cut"></div>
+            <label for="description" class="placeholder" name="description">Описание</label>
+        </div>
+      </div>
+      <div class="input-wrapper">
+        <div class="input-container ic4">
+          <input <%=path==='view' ? 'readonly' : 'required' %> name="authors" value="<%- book.authors %>" id="authors"
+            class="input" type="text" placeholder=" " />
+            <div class="cut cut-short"></div>
+            <label for="authors" class="placeholder">Автор</label>
+        </div>
+        <div class="input-container ic5">
+          <input <%=path==='view' ? 'readonly' : 'required' %> name="favorite" value="<%- book.favorite %>"
+            id="favorite" class="input" type="text" placeholder=" " />
+            <div class="cut cut-short"></div>
+            <label for="favorite" class="placeholder">favorite</label>
+        </div>
+      </div>
+      <div class="input-wrapper">
+        <div class="input-container ic6">
+          <input <%=path==='view' ? 'readonly' : 'required' %> name="fileCover" value="<%- book.fileCover %>"
+            id="fileCover" class="input" type="text" placeholder=" " />
+            <div class="cut cut-short"></div>
+            <label for="fileCover" class="placeholder">Обложка</label>
+        </div>
+        <div class="input-container ic2">
+          <input <%=path==='view' ? 'readonly' : 'required' %> name="fileName" value="<%- book.fileName %>"
+            id="fileName" class="input" type="text" placeholder=" " />
+            <div class="cut cut-short"></div>
+            <label for="fileName" class="placeholder">fileName</label>
+        </div>
+      </div>
+      <!-- <div class="input-wrapper">
+        <div class="input-container ic2">
+          <input <%= path === 'view' ?  'readonly' : 'required' %> name="fileBook" value="<%- book.fileBook %>" id="fileBook" class="input" type="text" placeholder=" "  />
+          <div class="cut cut-short"></div>
+          <label for="fileBook" class="placeholder">файл</label>
+        </div>
+      </div> -->
+      <% if(path !=='view' ){ %>
+        <input class="submit" type="submit">submit</input>
+        <% } %>
+
+    </form>
+  </main>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/js/index.js"></script>
+
+</html>

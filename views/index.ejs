@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/styles.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <main class="main-section">
+    <div class="heading">
+      <h1 class="heading__title">Список книг</h1>
+      <button class="create-book"><a href="/create" target="_blank">Создать книгу</a></button>
+    </div>
+    <div class="section-books cards">
+    <% books.forEach(function(book){ %>
+        <div class="card card-3" data-book-id=<%- book.id %>>
+          <div class="card__icon"><i class="fas fa-bolt"><%- book.title %></i></div>
+          <p class="card__exit"><i class="fas fa-times remove">X</i></p>
+          <div class="card__descr">
+            <p class="card__title"><%- book.description %></p>
+            <p class="card__title"><%- book.authors %></p>
+            <p class="card__title"><%- book.favorite %></p>
+            <p class="card__title"><%- book.fileCover %></p>
+            <p class="card__title"><%- book.fileName %></p>
+          </div>
+          <p class="card__apply">
+            <a class="card__link" href="/<%- book.id %>">Редактировать книгу<i class="fas fa-arrow-right"></i></a>
+            <a class="card__link" href="/view/<%- book.id %>">Просмотреть книгу<i class="fas fa-arrow-right"></i></a>
+          </p>
+        </div>
+        <% }); %>
+      </div> 
+  </main>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/js/index.js"></script>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/create.css">
+  <title>Создание книги</title>
+</head>
+
+<body>
+  <main class="main-section"  onsubmit="return setAction()">
+    <nav>
+      <li class="link_nav"><a href="/">Главная</a></li>
+    </nav>
+    <form class="form"  id="form" >
+      <div class="title">Создание книги</div>
+      <div class="input-wrapper">
+        <div class="input-container ic1">
+          <input value="asdas" id="title" class="input" type="text" placeholder=" " name="title" required  />
+          <div class="cut"></div>
+          <label for="title" class="placeholder">Заголовок</label>
+        </div>
+        <div class="input-container ic2">
+          <input value="asdas" id="description" class="input" type="text" placeholder=" " required name="description" />
+          <div class="cut"></div>
+          <label for="description" class="placeholder" name="description">Описание</label>
+        </div>
+      </div>
+      <div class="input-wrapper">
+        <div class="input-container ic4">
+          <input name="authors" value="asdas" id="authors" class="input" type="text" placeholder=" " required />
+          <div class="cut cut-short"></div>
+          <label for="authors" class="placeholder">Автор</label>
+        </div>
+        <div class="input-container ic5">
+          <input name="favorite" value="asdas" id="favorite" class="input" type="text" placeholder=" " required />
+          <div class="cut cut-short"></div>
+          <label for="favorite" class="placeholder">favorite</label>
+        </div>
+      </div>
+      <div class="input-wrapper">
+        <div class="input-container ic6">
+          <input name="fileCover" value="asdas" id="fileCover" class="input" type="text" placeholder=" " required />
+          <div class="cut cut-short"></div>
+          <label for="fileCover" class="placeholder">Обложка</label>
+        </div>
+        <div class="input-container ic2">
+          <input name="fileName" value="asdas" id="fileName" class="input" type="text" placeholder=" " required />
+          <div class="cut cut-short"></div>
+          <label for="fileName" class="placeholder">fileName</label>
+        </div>
+      </div>
+      <div class="input-wrapper">
+        <div class="input-container ic2">
+          <input name="fileBook" value="asdas" id="fileBook" class="input" type="text" placeholder=" " required />
+          <div class="cut cut-short"></div>
+          <label for="fileBook" class="placeholder">файл</label>
+        </div>
+      </div>
+      <input class="submit" type="submit" >submit</input>
+    </form>
+  </main>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/js/index.js"></script>
+
+</html>
